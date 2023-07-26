@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="button">
+        <div class="lable">press!</div> 
+    </button>
+</body>
+<style>
+    .button {
+        width: 100px;
+    }
+
+    .lable {
+        display: inline;
+        position: relative;
+        left: -5px;
+
+        transition: all 0.5s;
+    }
+
+    .lable::before {
+        content: '\00bb';
+        position: relative;
+
+        transition: all 0.5s;
+
+        opacity: 0;
+    }
+
+    .button:hover > .lable {
+        left: 0;
+    }
+
+    .button:hover > .lable::before {
+        opacity: 1;
+    }
+
+
+
+
+
+
+
+
+    
+
+    
+
+</style>
+</html>

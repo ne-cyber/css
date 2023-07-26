@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box"><input type="checkbox" class="checkbox"><div class="right">right</div></div>
+
+    <div>----------------------------</div>
+
+    <div class="my-checkbox">
+        <input type="checkbox" class="inner-checkbox"><div class="inner-text"></div>
+    </div>
+</body>
+<style>
+    .my-checkbox {
+        width: 15px;
+        height: 15px;
+
+        border: 1px solid black;
+        position: relative;
+    }
+
+    .inner-checkbox {
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+
+        padding: 0;
+        margin: 0;
+
+        position: absolute;
+        top:0;
+        left:0;
+
+        z-index: 2;
+        opacity: 0;
+    }
+
+    .inner-text {
+        position: absolute;
+
+
+        display: inline-block;
+
+        width: 13px;
+        height: 13px;
+        border: 1px solid blue;
+
+        padding: 0;
+        margin: 0;
+        z-index: 1;
+
+    }
+
+    .inner-checkbox:checked + .inner-text {
+        background-color: darkmagenta;
+    }
+
+/* ----------------------------------------- */
+    .box {
+
+    }
+
+    .checkbox {
+        display: inline-block;
+
+        width: 23px;
+        height: 23px;
+
+        background-color: lightpink;
+    }
+
+    .right {
+        display: inline-block;
+    }
+
+    .checkbox:checked + .right {
+        color: brown;
+    }
+</style>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>first p
+        <span>inner p</span>
+        <span>inner p</span>
+        <span>inner p</span>
+        <span>inner p</span>
+    </span>
+    <span>second p
+        <span>inner p</span>
+        <span>inner p</span>
+        <span>inner p</span>
+    </span>
+    <span>third p
+        <span>inner p</span>
+    </span>
+    <p>---------------------------------</p>
+    <div class="first">first div
+        <div class="second">inner second div</div>
+    </div>
+    <div class="second">second div</div>
+    <div class="second">second div</div>
+    <div class="second">second div</div>
+    <p>-----------------------------------</p>
+    <div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <div>
+        <div>first</div>
+        <div>second</div>
+    </div>
+    <div>
+        <div>9</div>
+        <div>9</div>
+        <div>9</div>
+        <div>9</div>
+        <div>9</div>
+        <div>9</div>
+        <div>9</div>
+        <div>9</div>
+        <div>9</div>
+        <div>9</div>
+    </div>
+</body>
+
+<style>
+    span + span {
+        color: rgb(6, 241, 104);
+    }
+
+    div:nth-child(2) + div {
+        background-color:navy;
+        color: azure
+    }
+
+
+
+    .first ~ .second {
+        color:chocolate
+    }
+
+
+    
+
+    span {
+        border: 3px solid burlywood;
+        display: block;
+    }
+</style>
+
+</html>

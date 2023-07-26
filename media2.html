@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>измените размер экрана до 1000пкс</div>
+    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro omnis sint praesentium commodi dolore, inventore ut, est pariatur optio quidem temporibus, ipsam sequi ullam neque expedita iste eligendi impedit error!</div>
+</body>
+<style>
+    @media screen and (min-width: 0px) and (max-width: 999px) {
+        .text {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 900;
+
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (min-width: 1000px) and (max-width: 10000px) {
+        .text {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 900;
+
+            font-size: 40px;
+        }
+    }
+</style>
+</html>

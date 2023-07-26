@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="menu">
+    <div class="little-menu">
+        <div class="caption">File</div>
+        <div class="dropdown">
+                <div class="content">New</div>
+                <div class="content">Open</div>
+                <div class="content">Close</div>
+                <div class="content">Quit</div>
+        </div>
+
+    </div>
+    <div class="little-menu">
+        <div class="caption">Edit</div>
+        <div class="dropdown">
+            <div class="content">Copy</div>
+            <div class="content">Paste</div>
+
+        </div>
+        
+    </div>
+    <div class="little-menu">
+        <div class="caption">Help</div>
+        <div class="dropdown">
+            <div class="content">Content</div>
+            <div class="content">donate</div>
+            <div class="content">About me</div>
+
+        </div>
+        
+    </div>
+</div>
+<div>Content of page</div>
+
+</body>
+<style>
+    .menu {
+        display: inline-block;
+    }
+
+    .little-menu {
+        display: inline-block;
+        min-width: 70px;
+
+
+
+        float: left;
+    }
+
+    .dropdown {
+        visibility: hidden;
+
+        opacity: 0;
+        transition: all 1s;
+
+        position: absolute;
+    }
+
+    .little-menu:hover > .dropdown {
+        visibility: visible;
+
+        opacity: 1;
+    }
+</style>
+</html>

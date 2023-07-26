@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+        src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+        crossorigin="anonymous">
+    </script>
+    <script type='text/javascript' src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js">
+        
+    </script>
+</head>
+<body>
+    
+    <div class="lable1">old phone input</div>
+    <input id="phone" type="tel">
+
+    <div class="label2">my credit card input</div>
+    <input id="myphone" type="tel">
+
+
+</body>
+<style>
+    #my-div {
+        width: 100px;
+        margin: auto;
+    }
+</style>
+<script>
+    // $(":input").inputmask();
+    $("#phone").inputmask({"mask": "(999) 999-9999"});
+
+    let caretPosition = 0;
+    let caretPositionWthoutSpaces = 0
+    let isInputSelectedRange = false
+
+    document.getElementById('myphone').addEventListener('input', (e) => {
+        console.log(e.inputType);
+        let start = e.target.selectionStart  + (caretPositionWthoutSpaces % 4 == 0 ? 1 : 0) - (caretPosition % 5 == 0 ? 1 : 0)
+        let end = start //e.target.selectionEnd + (caretPositionWthoutSpaces % 4 == 0 ? 1 : 0)
+
+        console.log('e.target.selectionStart',e.target.selectionStart);
+        console.log('e.target.selectionEnd',e.target.selectionEnd);
+
+        if(isInputSelectedRange && (e.inputType == 'deleteContentBackward' || e.inputType == 'deleteContentForward')) {
+            e.target.value = e.target.value.split('').filter((v) => v != ' ').reduce((prv, curr, i) => prv+(i%4 == 0 ? ' '+curr : curr))
+          
+        }
+        else if(e.inputType == "insertText" || e.inputType == 'insertFromPaste') {
+            e.target.value = e.target.value.split('').filter((v) => v != ' ').reduce((prv, curr, i) => prv+(i%4 == 0 ? ' '+curr : curr))
+            
+        }
+        else if(e.inputType == 'deleteContentBackward') {
+            if(caretPosition % 5 == 0) {
+                e.target.value = e.target.value.split('').filter((v) => v != ' ').filter((v,i) => (i+1 != caretPositionWthoutSpaces)).reduce((prv, curr, i) => prv+(i%4 == 0 ? ' '+curr : curr))
+                start -= 1
+                end = start
+            }
+            else {
+                e.target.value = e.target.value.split('').filter((v) => v != ' ').filter((v,i) => (true)).reduce((prv, curr, i) => prv+(i%4 == 0 ? ' '+curr : curr))
+            }
+
+
+        }
+        else if(e.inputType == 'deleteContentForward'){
+            if(caretPosition % 5 != 4 ) {
+                e.target.value = e.target.value.split('').filter((v) => v != ' ').filter((v,i) => true).reduce((prv, curr, i) => prv+(i%4 == 0 ? ' '+curr : curr))
+            }
+            else {
+                e.target.value = e.target.value.split('').filter((v) => v != ' ').filter((v,i) => (i != caretPositionWthoutSpaces)).reduce((prv, curr, i) => prv+(i%4 == 0 ? ' '+curr : curr))
+            }
+            console.log('deleteContentForward', e);
+        }
+        e.target.selectionStart = start
+        e.target.selectionEnd = end
+
+        console.log('text inserted');
+   
+    })
+
+    document.getElementById('myphone').addEventListener('0keyup', e => {
+        console.log('keyup');
+        console.log('Caret at: ', e.target.selectionStart)
+        caretPosition = e.target.selectionStart
+        caretPositionWthoutSpaces = caretPosition - parseInt(caretPosition/5)
+        console.log('caret: ', caretPositionWthoutSpaces);
+
+        console.log('e.target.selectionStart',e.target.selectionStart);
+        console.log('e.target.selectionEnd',e.target.selectionEnd);
+
+        
+    })
+
+
+     
+    // document.getElementById('myphone').addEventListener('0selectionchange', e => {
+    //     console.log('!!!!!selectionchange');
+    //     console.log('Caret at: ', e.target.selectionStart)
+    //     caretPosition = e.target.selectionStart
+    //     caretPositionWthoutSpaces = caretPosition - parseInt(caretPosition/5)
+    //     console.log('caret: ', caretPositionWthoutSpaces);
+    // })
+
+    document.getElementById('myphone').addEventListener('beforeinput', e => {
+        console.log('----beforeinput----', e.target.selectionStart, e.target.selectionEnd);
+        if(e.target.selectionStart != e.target.selectionEnd) {
+            isInputSelectedRange = true
+        }
+        else {
+            isInputSelectedRange = false
+        }
+
+        console.log(e.target.selectionStart);
+        caretPosition = e.target.selectionStart
+        caretPositionWthoutSpaces = caretPosition - parseInt(caretPosition/5)
+    })
+ 
+</script>
+</html>

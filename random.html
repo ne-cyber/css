@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- <div class="top-to-bottom" style="border: 1px solid grey;width: 100px;">1234</div> -->
+
+    <!-- <div style="border: 1px solid black; display: inline-block;">
+        <div class="top-to-bottom">sa<div class="normal">sasha</div>ha</div>
+    </div> -->
+
+
+    <div class="text">Hi!!!</div>
+    <div class="dancing-text"><div class="n0">0</div><div class="n1">1</div><div class="n2">2</div><div class="n3">3</div><div class="n4">4</div></div>
+    <!---->
+</body>
+<style>
+
+
+ 
+    .normal {
+        display: inline;
+        writing-mode: initial;
+        text-orientation: initial;
+
+        letter-spacing: initial;
+
+        
+        position: relative;
+        left: 35px;
+    }
+
+    .top-to-bottom {
+        display: inline;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+
+        letter-spacing: 0px;
+        /* line-height: 1px; */
+        letter-spacing: 0;
+    }
+    .text {
+        display: block;
+        width: fit-content;
+        position: relative;
+        transition: all 1.5s;
+        left: 0px;
+        border: 1px solid black;
+        /* left: $ra; */
+    }
+</style>
+<script>
+    let $text;
+    window.onload = function() {
+        $text = document.querySelector('.text')
+
+        setInterval(() => {
+            $text.style.left = 100 - Math.floor(Math.random()*100*1) + "px"
+        }, 1000)
+
+        let  n = 0
+        for(let $n = document.querySelector(`.dancing-text .n${n}`); $n !== null; $n = document.querySelector(`.dancing-text .n${++n}`)) {
+            $n.style.position = 'relative'
+            $n.style.transition ='all 0.5s'
+            $n.style.top = '0px'
+            $n.style.display = 'inline'
+
+            setInterval(() => {  
+                $n.style.top = Math.floor(Math.random()*10) + 'px'
+            }, 500);
+        }
+    }    
+</script>
+</html>

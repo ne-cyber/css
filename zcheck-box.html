@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="checkbox" name="" id="">
+        <span class="check-mark"></span>
+    </div>
+
+    
+    
+</body>
+<style>
+    div {
+        border: 1px solid saddlebrown;
+
+    }
+
+    input[type="checkbox"] {
+        width: 50px;
+        
+    }
+
+    .check-mark {
+        width: 10px;
+        height: 10px;
+
+        border: 1px solid blue;
+        display: inline-block;
+    }
+
+    
+
+    
+
+    input[type="checkbox"]::before {
+        content: '🌟';
+
+        position: relative;
+        left:0;
+        transition: left 1s;
+    }
+
+    input[type="checkbox"]:hover::before {
+        left: 45px
+    }
+
+</style>
+
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <br><br><br><br>
+    <div class="container" style="width: 100px; margin: auto">
+        <div class="main0">
+            <div class="side01">one</div>
+            <div class="side02">two</div>
+            <div class="side03">three</div>
+            <div class="side04">fourth</div>
+            <div class="side05">fifth</div>
+            <div class="side06">sixth</div>
+        </div>
+
+        <div class="main1">
+            <div class="side11">one</div>
+            <div class="side12">two</div>
+            <div class="side13">three</div>
+            <div class="side14">fourth</div>
+            <div class="side15">fifth</div>
+            <div class="side16">sixth</div>
+        </div>
+
+        <div class="main2">
+            <div class="side21">one</div>
+            <div class="side22">two</div>
+            <div class="side23">three</div>
+            <div class="side24">fourth</div>
+            <div class="side25">fifth</div>
+            <div class="side26">sixth</div>
+        </div>
+    </div>
+
+</body>
+<style>
+    .main0 {
+        width: 50px;
+        height: 50px;
+        transition: all 3s;
+
+        transform-style: preserve-3d;
+    }
+
+    .side01 {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: firebrick;
+        opacity: 0.5;
+
+        transform-style: preserve-3d;
+
+        transform: translateZ(25px);
+    }
+
+    .side02 {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: firebrick;
+        opacity: 0.5;
+
+        transform-style: preserve-3d;
+
+
+        transform: translateZ(-25px);
+    }
+
+    .side03 {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: aqua;
+        opacity: 0.5;
+
+        transform-style: preserve-3d;
+
+
+        transform: translateY(-25px) rotateX(90deg);
+    }
+
+    .side04 {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: aqua;
+        opacity: 0.5;
+
+        transform-style: preserve-3d;
+
+
+        transform: translateY(25px) rotateX(90deg);
+    }
+
+
+    .side05 {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(228, 252, 10, 0.521);
+        opacity: 0.5;
+
+        transform-style: preserve-3d;
+
+
+        transform: translateX(25px) rotateY(90deg);
+    }
+
+    .side06 {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(228, 252, 10, 0.521);
+        opacity: 0.5;
+
+        transform-style: preserve-3d;
+
+
+        transform: translateX(-25px) rotateY(90deg);
+    }
+
+    /* ---------------------------- */
+    .main1 {
+        width: 50px;
+        height: 50px;
+        transition: all 3s;
+
+        transform-style: preserve-3d;
+    }
+
+    .side11 {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: firebrick;
+        opacity: 0.5;
+
+        transform-style: preserve-3d;
+
+        transform: translateZ(25px);
+    }
+
+    .side12 {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: firebrick;
+        opacity: 0.5;
+
+        transform-style: preserve-3d;
+
+
+        transform: translateZ(-25px);
+    }
+
+    .side13 {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: aqua;
+        opacity: 0.5;
+
+        transform-style: preserve-3d;
+
+
+        transform: translateY(-25px) rotateX(90deg);
+    }
+
+    .side14 {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: aqua;
+        opacity: 0.5;
+
+        transform-style: preserve-3d;
+
+
+        transform: translateY(25px) rotateX(90deg);
+    }
+
+
+    .side15 {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(228, 252, 10, 0.521);
+        opacity: 0.5;
+
+        transform-style: preserve-3d;
+
+
+        transform: translateX(25px) rotateY(90deg);
+    }
+
+    .side16 {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(228, 252, 10, 0.521);
+        opacity: 0.5;
+
+        transform-style: preserve-3d;
+
+
+        transform: translateX(-25px) rotateY(90deg);
+    }
+
+    /* ----------------------------- */
+    .main2 {
+        width: 50px;
+        height: 50px;
+        transition: all 3s;
+
+        transform-style: preserve-3d;
+    }
+
+    .side21 {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: firebrick;
+        opacity: 0.5;
+
+        transform-style: preserve-3d;
+
+        transform: translateZ(25px);
+    }
+
+    .side22 {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: firebrick;
+        opacity: 0.5;
+
+        transform-style: preserve-3d;
+
+
+        transform: translateZ(-25px);
+    }
+
+    .side23 {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: aqua;
+        opacity: 0.5;
+
+        transform-style: preserve-3d;
+
+
+        transform: translateY(-25px) rotateX(90deg);
+    }
+
+    .side24 {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: aqua;
+        opacity: 0.5;
+
+        transform-style: preserve-3d;
+
+
+        transform: translateY(25px) rotateX(90deg);
+    }
+
+
+    .side25 {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(228, 252, 10, 0.521);
+        opacity: 0.5;
+
+        transform-style: preserve-3d;
+
+
+        transform: translateX(25px) rotateY(90deg);
+    }
+
+    .side26 {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(228, 252, 10, 0.521);
+        opacity: 0.5;
+
+        transform-style: preserve-3d;
+
+
+        transform: translateX(-25px) rotateY(90deg);
+    }
+</style>
+<script>
+    let $main0 = document.querySelector('.main0')
+    let $main1 = document.querySelector('.main1')
+    let $main2 = document.querySelector('.main2')
+
+    $main0.style.transform = `rotateX(0deg) rotateY(0deg) rotateZ(0deg)`
+    $main1.style.transform = `rotateX(0deg) rotateY(0deg) rotateZ(0deg)`
+    $main2.style.transform = `rotateX(0deg) rotateY(0deg) rotateZ(0deg)`
+
+    const interval = () => {
+        let rX0 = Math.random() * 360, rY0 = Math.random() * 360, rZ0 = Math.random() * 360
+        let rX1 = Math.random() * 360, rY1 = Math.random() * 360, rZ1 = Math.random() * 360
+        let rX2 = Math.random() * 360, rY2 = Math.random() * 360, rZ2 = Math.random() * 360
+
+
+        $main0.style.transform = `rotateX(${rX0}deg) rotateY(${rY0}deg) rotateZ(${rZ0}deg)`
+        $main1.style.transform = `rotateX(${rX1}deg) rotateY(${rY1}deg) rotateZ(${rZ1}deg)`
+        $main2.style.transform = `rotateX(${rX2}deg) rotateY(${rY2}deg) rotateZ(${rZ2}deg)`
+
+    }
+
+    setTimeout(interval, 100)
+    
+
+    setInterval(interval, 2000)
+</script>
+
+</html>

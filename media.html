@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Измените размер экрана до 500пкс</div>
+    <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem quisquam, dicta rerum unde soluta aut? Animi quasi maxime, rerum nam earum hic nisi libero dolores magni veritatis molestiae numquam fugit.</div>
+</body>
+<style>
+    /* больше, меньше */
+/* до 500пкс */
+@media screen and (max-width: 500px) and (min-width: 0) {
+    .text {
+        font-size: small;
+    }
+}
+/* до 10000пкс */
+@media screen and (max-width: 10000px) and (min-width: 501) {
+    .text {
+        font-size: large;
+    }
+}
+
+</style>
+</html>
